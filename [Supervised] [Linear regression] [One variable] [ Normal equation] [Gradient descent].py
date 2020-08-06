@@ -31,7 +31,7 @@ def gradientDescent_batch(X, y, theta, learning_rate=0.01, iterations=10000):
         theta_history[it, :] = theta.T
         J_History[it] = computeCost(theta, X, y)
 
-    return f'Theta0 = {theta[0][0]}, theta1 = {theta[0][1]}', J_History, theta_history
+    return f'Theta0 = {theta[0][0]}, theta1 = {theta[1][0]}', J_History, theta_history
 
 
 def NormalEquationMethod(X, y):
@@ -40,7 +40,7 @@ def NormalEquationMethod(X, y):
     inverse = np.linalg.inv(temp)
     temp2 = inverse.dot(X_transpose)
     theta = temp2.dot(y)
-    return f'Theta0 = {theta[0][0]}, theta1 = {theta[0][1]}'
+    return f'Theta0 = {theta[0][0]}, theta1 = {theta[1][0]}'
 
 
 def plotData(dataset, a, b):
