@@ -12,10 +12,7 @@ X_b = np.append(matrix_ones, X, axis=1)
 y = data.y.tolist()
 Y = np.array(y).reshape((len(y), 1))
 theta = np.random.randn(2, 1)
-m = len(x)
-L = 0.01
-a = 0
-b = 0
+
 
 
 def gradientDescent_batch(X, y, theta, learning_rate=0.01, iterations=10000):
@@ -59,10 +56,3 @@ def plotData(dataset, a, b):
     plt.show()
 
 
-# print(NormalEquationMethod(X_b, Y))
-
-
-# print(gradientDescent_batch(X_b, Y, theta))
-
-
-print(plotData(data, 1.19303364, -3.89578083))
