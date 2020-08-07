@@ -16,7 +16,7 @@ def featureScaling_mean_normalization(dataset):
     range_value = biggest_number - smallest_number
     average = sum(dataset)/len(dataset)
     for iterations in range(len(dataset)):
-        scaled = (x1[iterations]-average) / range_value
+        (dataset[iterations]-average) / range_value
 
 
 featureScaling_mean_normalization(x1)
